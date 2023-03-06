@@ -1,0 +1,150 @@
+:root{
+	--color-primario: #0D1730;
+	--color-secundario: #3E6FF9;
+}
+
+*{
+	box-sizing: border-box; /* esto hace que cuando yo agrego padding o margin a los elemento no crecen mas haya del tamaño que yo les di*/
+}
+
+body{
+	background: rgb(62,111,249);
+	background: radial-gradient(circle, rgba(62,111,249,1) 0%, rgba(13,23,48,1) 100%);
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container{
+	max-width: 1400px;
+	margin: auto;
+}
+
+.menu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px 0;
+}
+
+.section1{
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0 10px 10px 10px;
+	border-radius: 8px;
+}
+
+h1{
+	text-align: center;
+}
+
+button{
+	height: 100px;
+	width: 100px;
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.section2{
+	background-color: rgba(255, 255, 255, 0.2);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 0 20px;
+}
+
+.estadisticas{
+	border: 1px solid white;
+	height: 50px;
+	border-radius: 8px;
+	padding: 8px 20px;
+}
+
+/* - - - - - FOOTER - - - - - */
+
+.pie_pagina{
+	background-color: var(--color-primario);
+	text-align: center;
+}
+
+.pie_pagina .grupo{
+	width: auto;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 30px;
+	padding: 0;
+}
+
+.pie_pagina .grupo .box .logo{
+	width: 200px;
+}
+
+.pie_pagina .grupo .box h2{
+	color: #fff;
+	margin-bottom: 25px;
+	font-size: 20px;
+} 
+
+.pie_pagina .grupo .box p{
+	color: #efefef;
+	margin-bottom: 10px;
+}
+
+.pie_pagina .grupo .red_social a{
+	display: inline-block;
+	text-decoration: none;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	margin-right: 10px;
+	text-align: center;
+	transition: all 300ms ease;
+}
+
+.pie_pagina .grupo-2{
+	background-color: #0a1a2a;
+	padding: 5px 10px;
+	text-align: center;
+	color: #fff;
+}
+
+@media (min-width: 720px){
+
+	.menu{
+		width: 700px;
+		margin: 30px auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 35px 10px;
+	}
+
+	.section2{
+		border-top-right-radius: 8px;
+		border-bottom-left-radius: 0px;
+		width: 250px;
+		height: 400px;
+		padding: 0 5px;
+	}
+
+	.estadisticas{
+		height: 105px;
+		box-sizing: border-box;
+	}
+
+	.pie_pagina{
+		margin-top: auto;
+	}
+
+	.pie_pagina .grupo{
+		width: auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 50px;
+	}
+}
